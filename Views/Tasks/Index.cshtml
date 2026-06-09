@@ -1,0 +1,6 @@
+@model List<string> 
+@{    ViewData["Title"] = "My Tasks"; } 
+<h2>My Tasks</h2> 
+@if (!Model.Any()) { <p>No tasks yet.</p} } 
+else {    <ul>        @foreach (var task in Model)    { <li>@task</li> }    </ul> } 
+<a href="/tasks/create">+ Add a task</a>
